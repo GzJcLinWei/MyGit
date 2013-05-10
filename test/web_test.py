@@ -1,6 +1,5 @@
 import tornado.ioloop
 import tornado.web
-
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         s="demos1"
@@ -10,7 +9,7 @@ class WelCome(tornado.web.RequestHandler):
     def post(self):
         name=self.get_argument(r"user_name")
         password=self.get_argument(r"user_password")
-        if name=="haha" and password=="haha":
+        if name==Name and password==Pass:
             title="welcome!"+name
             self.render("welcome.html",name=name,title=title)
         else:
