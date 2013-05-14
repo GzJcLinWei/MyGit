@@ -1,4 +1,23 @@
 {% extends "modules\extends.html" %}
+
 {% block body %}
-{{welcome}}<br/>{{name}}
+  <table>
+  {% for A in range(a, 5+a) %}
+  <tr>
+  <td>{{A}}</td>
+  <td>{{test_list[A]}}</td>
+  </tr>
+  <tr>
+  {% end %}
+  <td>页数:{{i}}/{{pages}} &nbsp; 
+  {% if i>1 %}
+  <a href="\welcome?i={{i-1}}&a={{a-rows}}">上一页</a>
+  {% end %}
+  /
+  {% if i < pages %}
+  <a href="\welcome?i={{i+1}}&a={{a+rows}}">下一页</a>
+  {% end %}
+  </td>
+  </tr>
+ </table>
 {% end %}

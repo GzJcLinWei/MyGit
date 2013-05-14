@@ -5,7 +5,9 @@ import handlers
 
 
 application = tornado.web.Application([
-    (r"/",handlers.MainHandler),(r"/welcome",handlers.WelcomeHandler)
+    (r"/",handlers.MainHandler),
+    (r"/welcome",handlers.WelcomeHandler),
+    (r"/logon",handlers.Logon)
 ])
 
 
